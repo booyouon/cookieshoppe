@@ -25,8 +25,6 @@
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
 _The **cookieshoppe** MVP includes Ruby on Rails on the backend with postgresql as the database. Backend contains routes to get, put, post, and delete cookies. The frontend will fetch data to render data for the menu items. There will be a delivery or pick up options and a checkout screen._
 
 <br>
@@ -58,31 +56,37 @@ _The **cookieshoppe** MVP includes Ruby on Rails on the backend with postgresql 
 
 #### Wireframes
 
-![WireFrame](https://www.figma.com/file/Jz1vhKLWZY74AI7JSTGgDC/cookieshoppe?node-id=0%3A1)
-
 ![image](./wireframe.png)
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Component Tree](./component.png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
 
 ```structure
 
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ Navbar.jsx
+      |__ Splash.jsx
+      |__ Menu.jsx
+      |__ Payment.jsx
+      |__ Bag.jsx
+      |__ Checkout.jsx
+|__ containers/
+      |__ Home.jsx
+      |__ Order.jsx
+      |__ More.jsx
+      |__ Layout.jsx
+|__ screens/
+      |__ Main.jsx
 |__ services/
+      |__ apiConfig.js
+|__ utils/
 
 ```
 
