@@ -19,8 +19,7 @@
 
 ## Overview
 
-_**cookieshoppe** is the best place to find the freshest virtual cookies in all of the web. 
-
+**cookieshoppe** is the best place to find the freshest virtual cookies in all of the web.
 
 <br>
 
@@ -28,31 +27,30 @@ _**cookieshoppe** is the best place to find the freshest virtual cookies in all 
 
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **cookieshoppe** MVP includes Ruby on Rails on the backend with postgresql as the database. Backend contains routes to get, put, post, and delete cookies. The frontend will fetch data to render data for the menu items. There will be a delivery or pick up options and a checkout screen._
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Ruby on Rails backend with a cookie model_
+- _Frontend with a mobile first design_
+- _Working pseudo product checkout_
+- _Styled website that looks nice in any screen_
+- _UX friendly design that takes accesibility into consideration_
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|    Library    | Description                                             |
+| :-----------: | :------------------------------------------------------ |
+|     React     | _Frontend library_                                      |
+| React Router  | _Routing through the different screens on my frontend._ |
+|     Redux     | State Management.                                       |
+|     Axios     | _Frontend fetch request from my Backend._               |
+| Ruby on Rails | _Backend framework._                                    |
+|  PostgreSQL   | _Database._                                             |
 
 <br>
 
@@ -60,31 +58,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+![WireFrame](https://www.figma.com/file/Jz1vhKLWZY74AI7JSTGgDC/cookieshoppe?node-id=0%3A1)
 
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+![image](./wireframe.png)
 
 #### Component Tree
 
@@ -94,9 +70,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
 
-``` structure
+```structure
 
 src
 |__ assets/
@@ -133,13 +109,13 @@ src
 [ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
 
-***
+---
 
 ## Post-MVP
 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
-***
+---
 
 ## Code Showcase
 
