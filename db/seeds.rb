@@ -10,7 +10,7 @@ Cookie.destroy_all
 Review.destroy_all
 User.destroy_all
 
-@admin = User.create!(username: 'beans', email: 'booyouon@email.com', password: 'poop')
+@admin = User.create!(username: 'beans', email: 'booyouon@email.com', password: 'poopoo')
 
 puts "#{User.count} user(s) created"
 
