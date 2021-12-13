@@ -1,0 +1,30 @@
+.layout__nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.layout__footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+}
+
+.layout__logo {
+  width: 50px;
+}
+
+.layout__link {
+  cursor: pointer;
+}
+
+.layout__link > * {
+  margin: 0;
+  padding: 0;
+}
+
+.layout__children {
+  padding-top: 53px;
+}
