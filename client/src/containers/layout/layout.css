@@ -14,6 +14,7 @@
 
 .layout__logo {
   width: 50px;
+  cursor: pointer;
 }
 
 .layout__link {
