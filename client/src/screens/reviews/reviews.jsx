@@ -1,11 +1,24 @@
 import React from "react";
 import "./reviews.css";
 import ReviewForm from "./reviewForm";
+import ReviewUpdate from "./reviewUpdate";
+import { deleteReview } from "../../services/review";
+import { useHistory } from "react-router-dom";
 
-const Reviews = ({ cookie }) => {
+const Reviews = ({ cookie, setToggleFetch }) => {
+  const history = useHistory();
+  const reviewDelete = async (id) => {
+    await deleteReview(id);
+  };
+
+  const handleDelete = (review) => {
+    reviewDelete(review.id);
+    setToggleFetch((prevState) => !prevState);
+    history.push(`/cookies/${cookie.id}`);
+  };
   return (
     <div className="review">
-      <ReviewForm />
+      <ReviewForm cookie={cookie} setToggleFetch={setToggleFetch} />
       <div className="menu__cookieDiv">
         <h3>{cookie.name}</h3>
         <p>{cookie.description}</p>
@@ -17,8 +30,13 @@ const Reviews = ({ cookie }) => {
           <p>{review.description}</p>
           <div className="review__buttons">
             <p>Edit</p>
-            <p>Delete</p>
+            <p onClick={() => handleDelete(review)}>Delete</p>
           </div>
+          <ReviewUpdate
+            cookie={cookie}
+            review={review}
+            setToggleFetch={setToggleFetch}
+          />
         </div>
       ))}
       <div className="review__button">

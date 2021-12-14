@@ -9,13 +9,16 @@ import { Route } from "react-router-dom";
 
 const Main = () => {
   const [cookies, setCookies] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
   useEffect(() => {
     const fetchCookies = async () => {
       const cookieList = await getAllCookies();
       setCookies(cookieList);
+      console.log(cookieList);
     };
     fetchCookies();
-  }, []);
+  }, [toggleFetch]);
+
   return (
     <Layout>
       <Route exact path="/Order">
@@ -27,7 +30,7 @@ const Main = () => {
 
       {cookies.map((cookie, idx) => (
         <Route exact path={`/cookies/${cookie.id}`} key={idx}>
-          <Reviews cookie={cookie} />
+          <Reviews cookie={cookie} setToggleFetch={setToggleFetch} />
         </Route>
       ))}
     </Layout>

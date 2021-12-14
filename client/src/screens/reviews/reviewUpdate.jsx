@@ -1,19 +1,18 @@
 import React from "react";
+import { putReview } from "../../services/review";
 import { useState } from "react";
-import { postReview } from "../../services/review";
 
-const ReviewForm = ({ cookie, setToggleFetch }) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-
-  const handleReviewCreate = async (formData) => {
-    const newReview = await postReview(formData);
+const ReviewUpdate = ({ review, cookie, setToggleFetch }) => {
+  const [title, setTitle] = useState(review.title);
+  const [description, setDescription] = useState(review.description);
+  const handleReviewEdit = async (id, formData) => {
+    await putReview(id, formData);
     setToggleFetch((prevState) => !prevState);
   };
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    handleReviewCreate({
+    handleReviewEdit(review.id, {
       title: title,
       description: description,
       cookie_id: cookie.id,
@@ -41,4 +40,4 @@ const ReviewForm = ({ cookie, setToggleFetch }) => {
   );
 };
 
-export default ReviewForm;
+export default ReviewUpdate;
