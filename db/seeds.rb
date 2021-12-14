@@ -15,7 +15,7 @@ User.destroy_all
 puts "#{User.count} user(s) created"
 
 @chocolate_chip = Cookie.create!(
-  name: "Chocholate Chip",
+  name: "Chocolate Chip",
   description: "Yummy classic chocolate chip cookie",
   price: 1.99,
   img_url: "https://lospec.com/i/edis.png"
