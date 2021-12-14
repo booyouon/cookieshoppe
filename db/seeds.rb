@@ -41,21 +41,18 @@ Review.create!(
   title: "Amazing!",
   description: "10/10 the best cookie ever",
   cookie: @chocolate_chip,
-  user: @admin
 )
 
 Review.create!(
   title: "idk.",
   description: "I don't really like M&M's",
   cookie: @mm,
-  user: @admin
 )
 
 Review.create!(
   title: "frosty",
   description: "wowowowow",
   cookie: @frosted_sugar,
-  user: @admin
 )
 
 puts "#{Review.count} review(s) created"
