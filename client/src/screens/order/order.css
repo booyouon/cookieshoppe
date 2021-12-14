@@ -1,0 +1,39 @@
+.order__buttonMethod {
+  background-color: white;
+  width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.order__initial {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__selectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__select {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 10px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.order__select > h2 {
+  color: white;
+}

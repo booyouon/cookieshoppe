@@ -1,0 +1,40 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review__individual {
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.review__button {
+  color: white;
+  background-color: black;
+  width: 250px;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.review__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review__buttons p:first-child {
+  color: green;
+  cursor: pointer;
+}
+
+.review__buttons p:last-child {
+  color: red;
+  cursor: pointer;
+}

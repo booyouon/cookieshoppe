@@ -1,8 +1,8 @@
 import React from "react";
 import "./home.css";
-import cookie from "../../assets/images/500pxCOOOKIE.png";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ cookies }) => {
   return (
     <div className="home">
       <div className="menu">
@@ -10,20 +10,21 @@ const Home = () => {
           <h2>Cookie Menu</h2>
         </div>
         <ol>
-          <li className="menu__li">
-            <div className="menu__cookieDiv">
-              <h3>Chocolate Chip</h3>
-              <p>lorem ipsum dolor sit amet</p>
-            </div>
-            <img className="menu__cookie" src={cookie} alt="" />
-          </li>
-          <li className="menu__li">
-            <div className="menu__cookieDiv">
-              <h3>Chocolate Chip</h3>
-              <p>lorem ipsum dolor sit amet</p>
-            </div>
-            <img className="menu__cookie" src={cookie} alt="" />
-          </li>
+          {cookies.map((cookie) => (
+            <li className="menu__li">
+              <div className="menu__cookieDiv">
+                <h3>{cookie.name}</h3>
+                <p>{cookie.description}</p>
+              </div>
+              <Link to={`/cookies/${cookie.id}`}>
+                <img
+                  className="menu__cookie"
+                  src={cookie.img_url}
+                  alt={cookie.name}
+                />
+              </Link>
+            </li>
+          ))}
         </ol>
       </div>
     </div>
