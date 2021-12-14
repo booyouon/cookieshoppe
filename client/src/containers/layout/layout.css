@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: white;
 }
 .layout__footer {
   position: fixed;
@@ -10,6 +11,7 @@
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .layout__logo {
@@ -28,4 +30,5 @@
 
 .layout__children {
   padding-top: 53px;
+  padding-bottom: 71px;
 }

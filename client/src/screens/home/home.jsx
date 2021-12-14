@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import cookie from "../../assets/images/500pxCOOOKIE.png";
 
 const Home = () => {
   return (
@@ -9,12 +10,19 @@ const Home = () => {
           <h2>Cookie Menu</h2>
         </div>
         <ol>
-          <li>
-            <div>
+          <li className="menu__li">
+            <div className="menu__cookieDiv">
               <h3>Chocolate Chip</h3>
               <p>lorem ipsum dolor sit amet</p>
             </div>
-            
+            <img className="menu__cookie" src={cookie} alt="" />
+          </li>
+          <li className="menu__li">
+            <div className="menu__cookieDiv">
+              <h3>Chocolate Chip</h3>
+              <p>lorem ipsum dolor sit amet</p>
+            </div>
+            <img className="menu__cookie" src={cookie} alt="" />
           </li>
         </ol>
       </div>

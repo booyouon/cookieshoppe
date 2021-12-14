@@ -7,3 +7,27 @@
   align-items: center;
   justify-content: center;
 }
+
+.menu__cookie {
+  width: 250px;
+}
+
+.menu__li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.menu__li:nth-child(odd) {
+  flex-direction: row;
+}
+
+.menu__li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.menu__cookieDiv {
+  margin-right: 15px;
+  margin-left: 15px;
+}
