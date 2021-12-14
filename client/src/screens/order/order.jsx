@@ -7,8 +7,8 @@ import OrderCookie from "./orderCookie";
 const Order = ({ cookies }) => {
   return (
     <div>
-      {/* <OrderMethod /> */}
-      {/* <OrderMain /> */}
+      <OrderMethod />
+      <OrderMain />
       <OrderCookie cookies={cookies} />
     </div>
   );

@@ -1,7 +1,10 @@
 class CookiesController < ApplicationController
   def index
-    @flavors = Cookie.all
+    @cookies = Cookie.all
 
-    render json: @flavors
+    render json: @cookies, include: :reviews, status: :ok
+  end
+  def show
+    render json: @cookie
   end
 end

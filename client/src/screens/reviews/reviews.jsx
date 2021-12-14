@@ -1,20 +1,8 @@
 import React from "react";
-import { getAllReviews } from "../../services/review";
-import { useState, useEffect } from "react";
 import "./reviews.css";
 import ReviewForm from "./reviewForm";
 
 const Reviews = ({ cookie }) => {
-  console.log(cookie);
-  const [reviews, setReviews] = useState([]);
-  useEffect(() => {
-    const fetchReviews = async () => {
-      const reviewList = await getAllReviews();
-      setReviews(reviewList.filter((rev) => rev.cookie_id == cookie.id));
-      console.log(reviews);
-    };
-    fetchReviews();
-  }, [cookie]);
   return (
     <div className="review">
       <ReviewForm />
@@ -23,8 +11,8 @@ const Reviews = ({ cookie }) => {
         <p>{cookie.description}</p>
         <img className="menu__cookie" src={cookie.img_url} alt={cookie.name} />
       </div>
-      {reviews.map((review) => (
-        <div className="review__individual">
+      {cookie.reviews.map((review, idx) => (
+        <div className="review__individual" key={idx}>
           <h3>{review.title}</h3>
           <p>{review.description}</p>
           <div className="review__buttons">

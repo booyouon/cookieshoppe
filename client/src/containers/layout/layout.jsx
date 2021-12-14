@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <div className="layout__children">{children}</div>
       <footer className="layout__footer ">
         {footerLinks.map((link, idx) => (
-          <Link to={`/${link}`}>
+          <Link key={idx} to={`/${link}`}>
             <div className="layout__link" key={idx}>
               <img className="layout__logo" src={heartImage} alt={link} />
               <p>{link}</p>

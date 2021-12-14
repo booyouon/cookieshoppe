@@ -1,12 +1,14 @@
 import React from "react";
-import { postReview } from "../../services/review";
 
 const ReviewForm = () => {
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
   return (
-    <form>
+    <form onSubmit={(ev) => handleSubmit(ev)}>
       <input type="text" />
       <input type="text" />
-      <input type="text" />
+      <input type="hidden" value="" />
     </form>
   );
 };
