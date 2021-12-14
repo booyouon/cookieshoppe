@@ -18,21 +18,21 @@ puts "#{User.count} user(s) created"
   name: "Chocholate Chip",
   description: "Yummy classic chocolate chip cookie",
   price: 1.99,
-  img_url: "https://lospec.com/i/ozvi.png"
+  img_url: "https://lospec.com/i/edis.png"
 )
 
 @mm = Cookie.create!(
   name: "M&M",
   description: "M&M's in my cookie!",
   price: 2.99,
-  img_url: "https://lospec.com/i/3zyk.png"
+  img_url: "https://lospec.com/i/kuwj.png"
 )
 
 @frosted_sugar = Cookie.create!(
   name: "Pink Frosted Sugar",
   description: "It's pink and has colors",
   price: 3.99,
-  img_url: "https://lospec.com/i/1vps.png"
+  img_url: "https://lospec.com/i/6los.png"
 )
 
 puts "#{Cookie.count} cookie(s) created"

@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1
   def show
-    render json: @review, include: :cookies
+    render json: @review, include: :cookie
   end
 
   # POST /reviews
