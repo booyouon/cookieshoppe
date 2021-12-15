@@ -35,7 +35,38 @@
   cursor: pointer;
 }
 
+.review__buttons > input[type="submit"] {
+  border: none;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  padding: none;
+  width: auto;
+  background-color: none;
+  border: none;
+  color: green;
+  cursor: pointer;
+  background: none;
+}
+
 .review__buttons p:last-child {
   color: red;
   cursor: pointer;
+}
+
+.review__create__title {
+  border-radius: 10px;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  margin-left: -35px;
+}
+
+.review__create textarea {
+  resize: none;
+  width: 250px;
+  height: 100px;
+  padding-left: 10px;
+  margin-left: -35px;
+  border-radius: 10px;
 }

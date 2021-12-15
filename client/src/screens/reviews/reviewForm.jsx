@@ -20,7 +20,11 @@ const ReviewForm = ({ cookie, setToggleFetch }) => {
     });
   };
   return (
-    <form onSubmit={(ev) => handleSubmit(ev)}>
+    <form
+      
+      className="review__create"
+      onSubmit={(ev) => handleSubmit(ev)}
+    >
       <input
         type="text"
         name="title"
@@ -28,7 +32,7 @@ const ReviewForm = ({ cookie, setToggleFetch }) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <input
+      <textarea
         type="text"
         name="description"
         placeholder="description"
