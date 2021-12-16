@@ -4,10 +4,12 @@ import heartImage from "../../assets/images/500pxredheart.png";
 import "./layout.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Layout = ({ children }) => {
+  const location = useLocation();
   const footerLinks = ["Menu", "Order", "More"];
-  const [heartSrc, setHeartSrc] = useState("Menu");
+  const [heartSrc, setHeartSrc] = useState(location.pathname);
   return (
     <div>
       <nav className="layout__nav">
@@ -26,7 +28,7 @@ const Layout = ({ children }) => {
             >
               <img
                 className="layout__logo"
-                src={heartSrc === link ? heartImage : bwHeart}
+                src={heartSrc.includes(link) ? heartImage : bwHeart}
                 alt={link}
               />
               <p>{link}</p>

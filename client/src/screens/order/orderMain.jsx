@@ -1,6 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const OrderMain = () => {
+  const history = useHistory();
+  const location = useLocation();
+  console.log(location.pathname);
   const pricing = [
     {
       content: "Single",
@@ -19,10 +24,13 @@ const OrderMain = () => {
       price: "$21.00",
     },
   ];
+  const handleClick = () => {
+    history.push("/order/cookie");
+  };
   return (
     <div className="order__selectContainer">
       {pricing.map((price, idx) => (
-        <div key={idx} className="order__select">
+        <div onClick={() => handleClick()} key={idx} className="order__select">
           <h2>{price.content}</h2>
           <h2>{price.price}</h2>
         </div>

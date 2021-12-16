@@ -5,6 +5,7 @@ import OrderMain from "./orderMain";
 import OrderCookie from "./orderCookie";
 import { useState } from "react";
 import { Switch, Route } from "react-router-dom";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 const Order = ({ cookies }) => {
   const [delivery, setDelivery] = useState("");
@@ -14,12 +15,20 @@ const Order = ({ cookies }) => {
         <Route exact path="/order">
           <OrderMethod setDelivery={setDelivery} />
         </Route>
-        <Route path="/order/select">
-          <OrderMain />
-        </Route>
-        <Route path="/order/Cookie">
-          <OrderCookie cookies={cookies} />
-        </Route>
+        {delivery ? (
+          <Route path="/order/select">
+            <OrderMain />
+          </Route>
+        ) : (
+          <Redirect to="/order" />
+        )}
+        {delivery ? (
+          <Route path="/order/cookie">
+            <OrderCookie cookies={cookies} />
+          </Route>
+        ) : (
+          <Redirect to="/order" />
+        )}
       </Switch>
     </div>
   );
