@@ -18,7 +18,7 @@ const Reviews = ({ cookie, setToggleFetch }) => {
   const handleDelete = (review) => {
     reviewDelete(review.id);
     setToggleFetch((prevState) => !prevState);
-    history.push(`/cookies/${cookie.id}`);
+    history.push(0);
   };
   return (
     <div className="review">
