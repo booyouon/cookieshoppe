@@ -19,7 +19,11 @@ const Layout = ({ children }) => {
       <footer className="layout__footer ">
         {footerLinks.map((link, idx) => (
           <Link key={idx} to={`/${link}`}>
-            <div className="layout__link" key={idx}>
+            <div
+              onClick={() => setHeartSrc(link)}
+              className="layout__link"
+              key={idx}
+            >
               <img
                 className="layout__logo"
                 src={heartSrc === link ? heartImage : bwHeart}
