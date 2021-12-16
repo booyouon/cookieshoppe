@@ -22,8 +22,8 @@ const OrderCookie = ({ cookies, setAmount, amount, order, setOrder }) => {
       key={idx}
       onClick={() => handleRemove(el)}
       className="order__miniCookie"
-      src={el}
-      alt={el}
+      src={el.img_url}
+      alt={el.name}
     />
   ));
   return (
@@ -32,13 +32,13 @@ const OrderCookie = ({ cookies, setAmount, amount, order, setOrder }) => {
         {amount} more cookie{amount > 1 && "s"}
       </h1>
       {orderDiv}
-      <p className="order__button">Continue</p>
+      {amount === 0 && <p className="order__button">Continue</p>}
       <div className="order__cookieContainer">
         {cookies.map((cookie, idx) => (
           <div
             className="order__cookie"
             key={idx}
-            onClick={() => handleClick(cookie.img_url)}
+            onClick={() => handleClick(cookie)}
           >
             <img src={cookie.img_url} alt={cookie.name} />
             <h3>{cookie.name}</h3>
