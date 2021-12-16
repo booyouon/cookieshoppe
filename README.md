@@ -45,7 +45,6 @@ _The **cookieshoppe** MVP includes Ruby on Rails on the backend with postgresql 
 | :-----------: | :------------------------------------------------------ |
 |     React     | _Frontend library_                                      |
 | React Router  | _Routing through the different screens on my frontend._ |
-|     Redux     | State Management.                                       |
 |     Axios     | _Frontend fetch request from my Backend._               |
 | Ruby on Rails | _Backend framework._                                    |
 |  PostgreSQL   | _Database._                                             |
