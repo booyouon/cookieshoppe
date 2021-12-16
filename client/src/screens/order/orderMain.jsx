@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-const OrderMain = () => {
+const OrderMain = ({ setAmount }) => {
   const history = useHistory();
   const location = useLocation();
   console.log(location.pathname);
@@ -10,27 +10,37 @@ const OrderMain = () => {
     {
       content: "Single",
       price: "$2.00",
+      length: 1,
     },
     {
       content: "Quadruple",
       price: "$7.50",
+      length: 4,
     },
     {
       content: "Half Dozen",
       price: "$11.00",
+      length: 6,
     },
     {
       content: "Dozen",
       price: "$21.00",
+      length: 12,
     },
   ];
-  const handleClick = () => {
+  const handleClick = (amount) => {
+    console.log(amount)
+    setAmount(amount);
     history.push("/order/cookie");
   };
   return (
     <div className="order__selectContainer">
       {pricing.map((price, idx) => (
-        <div onClick={() => handleClick()} key={idx} className="order__select">
+        <div
+          onClick={() => handleClick(price.length)}
+          key={idx}
+          className="order__select"
+        >
           <h2>{price.content}</h2>
           <h2>{price.price}</h2>
         </div>

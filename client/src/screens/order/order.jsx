@@ -9,6 +9,8 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 const Order = ({ cookies }) => {
   const [delivery, setDelivery] = useState("");
+  const [amount, setAmount] = useState(0);
+  const [order, setOrder] = useState([]);
   return (
     <div>
       <Switch>
@@ -17,14 +19,19 @@ const Order = ({ cookies }) => {
         </Route>
         {delivery ? (
           <Route path="/order/select">
-            <OrderMain />
+            <OrderMain setAmount={setAmount} />
           </Route>
         ) : (
           <Redirect to="/order" />
         )}
         {delivery ? (
           <Route path="/order/cookie">
-            <OrderCookie cookies={cookies} />
+            <OrderCookie
+              amount={amount}
+              cookies={cookies}
+              order={order}
+              setOrder={setOrder}
+            />
           </Route>
         ) : (
           <Redirect to="/order" />

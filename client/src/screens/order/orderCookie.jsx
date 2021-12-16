@@ -1,16 +1,20 @@
 import React from "react";
 
-const OrderCookie = ({ cookies }) => {
-  console.log(cookies);
+const OrderCookie = ({ cookies, amount, order, setOrder }) => {
   return (
-    <div className="order__cookieContainer">
-      {cookies.map((cookie, idx) => (
-        <div className="order__cookie" key={idx}>
-          <img src={cookie.img_url} alt={cookie.name} />
-          <h3>{cookie.name}</h3>
-        </div>
-      ))}
-    </div>
+    <>
+      <h1>
+        {amount} more cookie{amount > 1 && "s"}
+      </h1>
+      <div className="order__cookieContainer">
+        {cookies.map((cookie, idx) => (
+          <div className="order__cookie" key={idx}>
+            <img src={cookie.img_url} alt={cookie.name} />
+            <h3>{cookie.name}</h3>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
