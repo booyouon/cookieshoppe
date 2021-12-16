@@ -1,12 +1,20 @@
 import React from "react";
 
-const OrderMethod = () => {
+const OrderMethod = ({ setDelivery }) => {
+  const handleDelivery = () => {
+    console.log("delivery");
+    setDelivery("delivery");
+  };
+  const handleShip = () => {
+    console.log("ship");
+    setDelivery("ship");
+  };
   return (
     <div className="order__initial">
-      <div className="order__buttonMethod">
+      <div onClick={() => handleDelivery()} className="order__buttonMethod">
         <h2>Delivery</h2>
       </div>
-      <div className="order__buttonMethod">
+      <div onClick={() => handleShip()} className="order__buttonMethod">
         <h2>Pickup</h2>
       </div>
     </div>
