@@ -25,6 +25,9 @@ const Main = () => {
       <Route exact path={["/", "/Menu"]}>
         <Home cookies={cookies} />
       </Route>
+      <Route exact path="/more">
+        <div>under construction</div>
+      </Route>
 
       {cookies.map((cookie, idx) => (
         <Route exact path={`/cookies/${cookie.id}`} key={idx}>

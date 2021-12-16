@@ -1,11 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 const OrderMain = ({ setAmount }) => {
   const history = useHistory();
-  const location = useLocation();
-  console.log(location.pathname);
   const pricing = [
     {
       content: "Single",
@@ -29,7 +26,7 @@ const OrderMain = ({ setAmount }) => {
     },
   ];
   const handleClick = (amount) => {
-    console.log(amount)
+    console.log(amount);
     setAmount(amount);
     history.push("/order/cookie");
   };

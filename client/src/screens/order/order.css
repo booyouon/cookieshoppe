@@ -48,3 +48,7 @@
 .order__cookie img {
   width: 200px;
 }
+
+.order__miniCookie {
+  width: 30px;
+}

@@ -28,6 +28,7 @@ const Order = ({ cookies }) => {
           <Route path="/order/cookie">
             <OrderCookie
               amount={amount}
+              setAmount={setAmount}
               cookies={cookies}
               order={order}
               setOrder={setOrder}
