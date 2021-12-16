@@ -32,3 +32,7 @@
   padding-top: 53px;
   margin-bottom: 100px;
 }
+
+#root > div > div > footer > a {
+  text-decoration: none;
+}
