@@ -11,7 +11,10 @@ const OrderCookie = ({ cookies, setAmount, amount, order, setOrder }) => {
   };
 
   const handleRemove = (el) => {
-    setOrder((prevState) => prevState.filter((item) => item !== el));
+    const index = order.indexOf(el);
+    const oldOrder = order;
+    oldOrder.splice(index, 1);
+    setOrder(oldOrder);
     setAmount((prevState) => prevState + 1);
   };
   const orderDiv = order?.map((el, idx) => (
