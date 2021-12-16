@@ -21,8 +21,8 @@ const OrderMain = () => {
   ];
   return (
     <div className="order__selectContainer">
-      {pricing.map((price) => (
-        <div className="order__select">
+      {pricing.map((price, idx) => (
+        <div key={idx} className="order__select">
           <h2>{price.content}</h2>
           <h2>{price.price}</h2>
         </div>

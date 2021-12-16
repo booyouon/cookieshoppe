@@ -21,9 +21,7 @@ const Main = () => {
 
   return (
     <Layout>
-      <Route exact path="/Order">
-        <Order cookies={cookies} />
-      </Route>
+      <Order cookies={cookies} />
       <Route exact path={["/", "/Menu"]}>
         <Home cookies={cookies} />
       </Route>

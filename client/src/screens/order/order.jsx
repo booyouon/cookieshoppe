@@ -11,13 +11,13 @@ const Order = ({ cookies }) => {
   return (
     <div>
       <Switch>
-        <Route path="/Order">
+        <Route exact path="/order">
           <OrderMethod setDelivery={setDelivery} />
         </Route>
-        <Route>
-          <OrderMain path="/Order/Main" />
+        <Route path="/order/select">
+          <OrderMain />
         </Route>
-        <Route path="/Order/Cookie">
+        <Route path="/order/Cookie">
           <OrderCookie cookies={cookies} />
         </Route>
       </Switch>

@@ -10,8 +10,8 @@ const Home = ({ cookies }) => {
           <h2>Cookie Menu</h2>
         </div>
         <ol>
-          {cookies.map((cookie) => (
-            <li className="menu__li">
+          {cookies.map((cookie, idx) => (
+            <li key={idx} className="menu__li">
               <div className="menu__cookieDiv">
                 <h3>{cookie.name}</h3>
                 <p>{cookie.description}</p>
