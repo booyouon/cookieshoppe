@@ -32,6 +32,7 @@ const OrderCookie = ({ cookies, setAmount, amount, order, setOrder }) => {
         {amount} more cookie{amount > 1 && "s"}
       </h1>
       {orderDiv}
+      <p className="order__button">Continue</p>
       <div className="order__cookieContainer">
         {cookies.map((cookie, idx) => (
           <div
