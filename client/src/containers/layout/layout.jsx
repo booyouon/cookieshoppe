@@ -1,10 +1,13 @@
 import React from "react";
-import heartImage from "../../assets/images/500pxbwheart.png";
+import bwHeart from "../../assets/images/500pxbwheart.png";
+import heartImage from "../../assets/images/500pxredheart.png";
 import "./layout.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Layout = ({ children }) => {
   const footerLinks = ["Menu", "Order", "More"];
+  const [heartSrc, setHeartSrc] = useState("Menu");
   return (
     <div>
       <nav className="layout__nav">
@@ -17,7 +20,11 @@ const Layout = ({ children }) => {
         {footerLinks.map((link, idx) => (
           <Link key={idx} to={`/${link}`}>
             <div className="layout__link" key={idx}>
-              <img className="layout__logo" src={heartImage} alt={link} />
+              <img
+                className="layout__logo"
+                src={heartSrc === link ? heartImage : bwHeart}
+                alt={link}
+              />
               <p>{link}</p>
             </div>
           </Link>
