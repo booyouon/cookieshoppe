@@ -47,10 +47,12 @@
 
 .order__cookie img {
   width: 200px;
+  cursor: pointer;
 }
 
 .order__miniCookie {
   width: 30px;
+  cursor: pointer;
 }
 
 .order__button {
