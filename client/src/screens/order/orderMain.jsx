@@ -26,7 +26,6 @@ const OrderMain = ({ setAmount }) => {
     },
   ];
   const handleClick = (amount) => {
-    console.log(amount);
     setAmount(amount);
     history.push("/order/cookie");
   };

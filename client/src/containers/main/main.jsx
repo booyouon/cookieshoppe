@@ -14,7 +14,6 @@ const Main = () => {
     const fetchCookies = async () => {
       const cookieList = await getAllCookies();
       setCookies(cookieList);
-      console.log(cookieList);
     };
     fetchCookies();
   }, [toggleFetch]);
