@@ -34,6 +34,17 @@
   border-radius: 10px;
 }
 
+.order__cookieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
 .order__select > h2 {
   color: white;
+}
+
+.order__cookie img {
+  width: 200px;
 }
