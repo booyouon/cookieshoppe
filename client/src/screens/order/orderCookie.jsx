@@ -28,9 +28,9 @@ const OrderCookie = ({ cookies, setAmount, amount, order, setOrder }) => {
   ));
   return (
     <>
-      <h1>
+      <h3>
         {amount} more cookie{amount > 1 && "s"}
-      </h1>
+      </h3>
       {orderDiv}
       {amount === 0 && <p className="order__button">Continue</p>}
       <div className="order__cookieContainer">

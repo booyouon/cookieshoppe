@@ -22,7 +22,7 @@ const Order = ({ cookies }) => {
       </Route>
       <Route exact path="/order/select">
         {delivery ? (
-          <OrderMain setAmount={setAmount} />
+          <OrderMain delivery={delivery} setAmount={setAmount} />
         ) : (
           <Redirect to="/order" />
         )}

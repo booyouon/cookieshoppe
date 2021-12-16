@@ -1,6 +1,6 @@
 .order__buttonMethod {
   background-color: white;
-  width: 400px;
+  width: 300px;
   margin: 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -30,7 +30,7 @@
   justify-content: space-between;
   padding: 0 20px;
   margin: 10px;
-  width: 400px;
+  width: 300px;
   border-radius: 10px;
 }
 
@@ -58,4 +58,13 @@
 .order__button {
   color: green;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .order__buttonMethod {
+    width: 400px;
+  }
+  .order__select {
+    width: 400px;
+  }
 }

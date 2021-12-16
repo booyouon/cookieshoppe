@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-const OrderMain = ({ setAmount }) => {
+const OrderMain = ({ setAmount, delivery }) => {
   const history = useHistory();
   const pricing = [
     {
@@ -30,18 +30,21 @@ const OrderMain = ({ setAmount }) => {
     history.push("/order/cookie");
   };
   return (
-    <div className="order__selectContainer">
-      {pricing.map((price, idx) => (
-        <div
-          onClick={() => handleClick(price.length)}
-          key={idx}
-          className="order__select"
-        >
-          <h2>{price.content}</h2>
-          <h2>{price.price}</h2>
-        </div>
-      ))}
-    </div>
+    <>
+      <h3>Order method: {delivery}</h3>
+      <div className="order__selectContainer">
+        {pricing.map((price, idx) => (
+          <div
+            onClick={() => handleClick(price.length)}
+            key={idx}
+            className="order__select"
+          >
+            <h2>{price.content}</h2>
+            <h2>{price.price}</h2>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
