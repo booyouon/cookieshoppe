@@ -1,14 +1,28 @@
 import React from "react";
 
 const OrderCookie = ({ cookies, setAmount, amount, order, setOrder }) => {
-  const orderDiv = order?.map((el, idx) => (
-    <img key={idx} className="order__miniCookie" src={el} alt={el} />
-  ));
   const handleClick = (url) => {
-    setAmount((prevState) => prevState - 1);
-    console.log(amount);
-    setOrder((prevState) => [...prevState, url]);
+    if (amount > 0) {
+      setAmount((prevState) => prevState - 1);
+      setOrder((prevState) => [...prevState, url]);
+    } else {
+      console.log("poop");
+    }
   };
+
+  const handleRemove = (el) => {
+    setOrder((prevState) => prevState.filter((item) => item !== el));
+    setAmount((prevState) => prevState + 1);
+  };
+  const orderDiv = order?.map((el, idx) => (
+    <img
+      key={idx}
+      onClick={() => handleRemove(el)}
+      className="order__miniCookie"
+      src={el}
+      alt={el}
+    />
+  ));
   return (
     <>
       <h1>
