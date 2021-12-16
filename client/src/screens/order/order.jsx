@@ -15,7 +15,11 @@ const Order = ({ cookies }) => {
     <div>
       <Switch>
         <Route exact path="/order">
-          <OrderMethod setDelivery={setDelivery} />
+          <OrderMethod
+            setAmount={setAmount}
+            setOrder={setOrder}
+            setDelivery={setDelivery}
+          />
         </Route>
         {delivery ? (
           <Route path="/order/select">

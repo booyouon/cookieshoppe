@@ -1,15 +1,18 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-const OrderMethod = ({ setDelivery }) => {
+const OrderMethod = ({ setDelivery, setAmount, setOrder }) => {
   const history = useHistory();
   const handleDelivery = () => {
     setDelivery("delivery");
+    setAmount(0);
+    setOrder([]);
     history.push("/order/select");
   };
   const handleShip = () => {
-    console.log("ship");
     setDelivery("ship");
+    setAmount(0);
+    setOrder([]);
     history.push("/order/select");
   };
   return (
