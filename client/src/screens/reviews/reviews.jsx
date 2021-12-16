@@ -4,9 +4,11 @@ import ReviewUpdate from "./reviewUpdate";
 import { deleteReview } from "../../services/review";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import ReviewForm from "./reviewForm";
 
 const Reviews = ({ cookie, setToggleFetch }) => {
   const [editDisplay, setEditDisplay] = useState(false);
+  const [createDisplay, setCreateDisplay] = useState(false);
 
   const history = useHistory();
   const reviewDelete = async (id) => {
@@ -25,9 +27,19 @@ const Reviews = ({ cookie, setToggleFetch }) => {
         <p>{cookie.description}</p>
         <img className="menu__cookie" src={cookie.img_url} alt={cookie.name} />
       </div>
+      <ReviewForm
+        cookie={cookie}
+        setToggleFetch={setToggleFetch}
+        createDisplay={createDisplay}
+        setCreateDisplay={setCreateDisplay}
+      />
       {cookie.reviews.map((review, idx) => (
-        <div className="review__individual" key={idx}>
-          <div style={{ display: editDisplay ? "none" : "block" }}>
+        <div
+          style={{ display: createDisplay && "none" }}
+          className="review__individual"
+          key={idx}
+        >
+          <div style={{ display: editDisplay && "none" }}>
             <h3>{review.title}</h3>
             <p>{review.description}</p>
             <div className="review__buttons">
@@ -46,7 +58,11 @@ const Reviews = ({ cookie, setToggleFetch }) => {
           />
         </div>
       ))}
-      <div className="review__button">
+      <div
+        style={{ display: editDisplay || createDisplay ? "none" : "inherit" }}
+        className="review__button"
+        onClick={() => setCreateDisplay((prevState) => !prevState)}
+      >
         <h3>Write A Review</h3>
       </div>
     </div>

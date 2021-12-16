@@ -2,12 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { postReview } from "../../services/review";
 
-const ReviewForm = ({ cookie, setToggleFetch }) => {
+const ReviewForm = ({
+  cookie,
+  setToggleFetch,
+  createDisplay,
+  setCreateDisplay,
+}) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   const handleReviewCreate = async (formData) => {
-    const newReview = await postReview(formData);
+    await postReview(formData);
     setToggleFetch((prevState) => !prevState);
   };
 
@@ -18,15 +23,20 @@ const ReviewForm = ({ cookie, setToggleFetch }) => {
       description: description,
       cookie_id: cookie.id,
     });
+    setDescription("");
+    setTitle("");
+    setCreateDisplay((prevState) => !prevState);
   };
+
   return (
     <form
-      
-      className="review__create"
+      style={{ display: createDisplay || "none" }}
+      className="review__post"
       onSubmit={(ev) => handleSubmit(ev)}
     >
       <input
         type="text"
+        className="review__post__title"
         name="title"
         placeholder="title"
         value={title}
@@ -40,7 +50,12 @@ const ReviewForm = ({ cookie, setToggleFetch }) => {
         onChange={(e) => setDescription(e.target.value)}
       />
       <input type="hidden" name="cookie_id" value={cookie.id} />
-      <input type="submit" value="submit" />
+      <div className="review__buttons">
+        <input type="submit" value="Submit" />
+        <p onClick={() => setCreateDisplay((prevState) => !prevState)}>
+          Cancel
+        </p>
+      </div>
     </form>
   );
 };

@@ -54,19 +54,33 @@
   cursor: pointer;
 }
 
-.review__create__title {
+.review__update__title,
+.review__post__title {
   border-radius: 10px;
   width: 250px;
   height: 30px;
   padding-left: 10px;
+}
+
+.review__update__title {
   margin-left: -35px;
 }
 
-.review__create textarea {
+.review__update textarea,
+.review__post textarea {
   resize: none;
   width: 250px;
   height: 100px;
   padding-left: 10px;
-  margin-left: -35px;
   border-radius: 10px;
+}
+
+.review__update textarea {
+  margin-left: -35px;
+}
+
+.review__post {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
 }

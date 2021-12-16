@@ -29,12 +29,12 @@ const ReviewUpdate = ({
   return (
     <form
       style={{ display: editDisplay ? "block" : "none" }}
-      className="review__create"
+      className="review__update"
       onSubmit={(ev) => handleSubmit(ev)}
     >
       <input
         type="text"
-        className="review__create__title"
+        className="review__update__title"
         name="title"
         placeholder="title"
         value={title}
